@@ -11,7 +11,7 @@ export default function Homepage() {
 
     return <div>
 
-        <h1 className="text-center mt-4 mb-4 h1-title">BOOK ROOMS</h1>
+        <h1 className="text-center h1-title">BOOK ROOMS</h1>
         <div className="container text-center mb-4">
             <div className="row align-items-start my-gap">
                 <div className="col-sm-12 col-md-5 col-lg-3 text-white">
@@ -21,19 +21,19 @@ export default function Homepage() {
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-5 col-lg-3 text-white">
-                    <h3 className="fw-bold nosifer-regular">Lo scopo</h3>
+                    <h3 className="fw-bold nosifer-regular">Lo scopo del gioco</h3>
                     <div className="b-color rounded-2">
                         <p className="cal-sans-regular">Devi indovinare attraverso delle scelte, quale sia la via giusta per uscirne vivo!</p>
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-5 col-lg-3 text-white">
-                    <h3 className="fw-bold nosifer-regular">Pronto a metterti alla prova?</h3>
+                    <h3 className="fw-bold nosifer-regular">Mettiti alla prova</h3>
                     <div className="b-color rounded-2">
                         <p className="cal-sans-regular">"Logica, intuito e creatività: le Book Room sono il modo perfetto per mettere alla prova il tuo cervello divertendoti!"</p>
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-5 col-lg-3 text-white">
-                    <h3 className="fw-bold nosifer-regular">Un divertimento assicurato</h3>
+                    <h3 className="fw-bold nosifer-regular">Divertimento assicurato</h3>
                     <div className="b-color rounded-2">
                         <p className="cal-sans-regular">Chiunque abbia provato le nostre Book Room ne è uscito soddisfatto!</p>
                     </div>
@@ -52,6 +52,33 @@ export default function Homepage() {
                 </div>
             </div>
         </div>
+
+        {/* <footer className="container-footer d-flex">
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+            </div>
+
+        </footer> */}
 
     </div>
 

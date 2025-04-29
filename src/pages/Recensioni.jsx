@@ -32,7 +32,7 @@ export default function Recensioni() {
         email: '',
         name: '',
         description: '',
-        valutation: 1
+        valutation: '★'
     });
 
     function handleFormData(event) {
@@ -85,7 +85,7 @@ export default function Recensioni() {
                     {alert.message}
                 </div>
             )}
-            <form onSubmit={savePost}>
+            <form onSubmit={savePost} className="my-form">
                 <div className="mb-3">
                     <label className="form-label">Email</label>
                     <input type="text"
@@ -109,27 +109,28 @@ export default function Recensioni() {
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label">Lasciaci un feedback</label>
-                    <input type="text"
-                        name='description'
-                        value={formData.description}
-                        onChange={handleFormData}
-                        placeholder='Lasciaci un feedback'
-                        className="form-control "
-                    />
-                </div>
-
-                <div className="mb-3">
                     <label className="form-label">Valutazione</label>
                     <input type="number"
                         name='valutation'
                         value={formData.valutation}
                         onChange={handleFormData}
-                        placeholder='Votazione: 1-5'
+                        placeholder='Votazione: 1-5 ★'
                         className="form-control"
                         min={1} max={5}
                     />
                 </div>
+
+                <div className="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Lasciaci un feedback</label>
+                    <textarea type="text"
+                        name='description'
+                        value={formData.description}
+                        onChange={handleFormData}
+                        placeholder='Lasciaci un feedback'
+                        className="form-control" id="exampleFormControlTextarea1" rows="4"
+                    />
+                </div>
+
                 <button type="submit" className="btn btn-primary">Invia recensione</button>
             </form>
         </div>
@@ -138,7 +139,7 @@ export default function Recensioni() {
             <div>Caricamento in corso...</div>
         ) : (
             array.map(({ name, description, valutation }, index) => (
-                <div key={index} className="container text-bg-secondary mb-2 mt-5 rounded-3 p-2 card-form">
+                <div key={index} className="container text-bg-secondary mb-2 mt-5 rounded-3 p-2 card-form my-form">
                     <h3 className="card-header mb-2">Valutazione:  <span className="text-warning">{star(valutation)}</span></h3>
                     <div className="card-body">
                         <h5 className="card-title mb-2">User: {name}</h5>
